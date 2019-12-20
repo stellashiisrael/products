@@ -10,8 +10,7 @@ while True:
 	if name == 'q': #输入q，退出循环
 		break
 	price = input('请输入商品价格:')
-	p = [name, price] #大清单里的小清单
-	products.append(p) #小清单里有2个元素，把两个元素一起放入大清单（二维清单）
+	products.append([name, price]) #小清单里有2个元素，把两个元素一起放入大清单（二维清单）
 print(products)
 
 #products[0][0]
