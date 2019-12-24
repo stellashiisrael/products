@@ -3,16 +3,20 @@
 products = []
 with open ('products.csv', 'r', encoding = 'utf-8') as f:
 	for line in f:
+		if '商品，价格' in line:
+			  continue
+		#continue 和break都只能在回圈内，continue是跳到下一个回圈的意思
 		name,price = line.strip().split(',')
 		products.append([name, price])
 print(products)
+
 
 
 #重复输入购买过的东西
 #while loop (不知道执行几次的情况下使用)
 products = []
 
-
+#请使用者输入 
 while True:
 	name = input('请输入商品名称:')
 
@@ -27,10 +31,14 @@ print(products)
 #products这个清单中，第一个集合里面，第一个位置的数据（清单数据第一个为0，第二个为1）
 #products[1][1]，大清单中，第二个位置的第二个数据
 
+
+
+#印出所有商品购买记录
 for p in products:
 	print(p[0], '的价格是',  p[1])
 #products 是大清单，所以打印出大清单，就会把里面的东西全部一行展示出来
 #p是小清单，所以会打印出小清单里的东西，自动换行显示
+
 
 #写入/产生档案：
 with open('products.csv', 'w', encoding ='utf-8' ) as f:#打开档案；写入模式；utf-8 解决中文乱码问题
