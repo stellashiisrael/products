@@ -1,6 +1,21 @@
+
+#读取档案
+products = []
+with open ('products.csv', 'r', encoding = 'utf-8') as f:
+	for line in f:
+		s = line.strip().split(',')
+		name = s[0]
+		price = s[1]
+		#or name,price = line.strip().split(',')
+		#print(s)
+#在输出的文档后面加上另外的文字
+        ##or name,price,XXXX = line.strip().split(',')
+		#print(s)
+		print(s)
+
+
 #重复输入购买过的东西
 #while loop (不知道执行几次的情况下使用)
-
 products = []
 
 
